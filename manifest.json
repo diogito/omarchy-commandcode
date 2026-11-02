@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "commandcode.usage",
+  "name": "Command Code",
+  "version": "1.0.0",
+  "author": "diogito",
+  "license": "MIT",
+  "description": "Command Code 5-hour, weekly, and monthly usage meters in the Omarchy bar.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Command Code",
+    "description": "5-hour, weekly, and monthly usage for the Command Code subscription.",
+    "category": "AI",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 300
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 60,
+        "max": 3600,
+        "step": 30,
+        "defaultValue": 300
+      }
+    ]
+  }
+}
